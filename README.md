@@ -18,12 +18,9 @@
 - Postman
 - PostgreSQL
 
-```
-`rgb(9, 105, 218)`
-✅Checklist:
-- Spring Initializr {
-    o Maven 
-    o Java 17 
-    o Packing JAR 
-    o Dependencies: Spring Web}
-```
+
+> [!NOTE]
+> - [x] **_Spring Initializr_**   [Maven  |Java 17 |Packing JAR | Dependencies: Spring Web]
+> - [x] **_User entity and resource_**  [Basic attributes |Associations(instantiate collections) |Constructors |Getters & Setters(collections: only get) |hashCode & equals | Serializable]
+> - [ ] **_H2 database, test profile, JPA_** [JPA & H2 dependencies |application.properties |application-test.properties |Entity: JPA mapping]
+
