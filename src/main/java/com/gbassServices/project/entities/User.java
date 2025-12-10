@@ -16,6 +16,10 @@ public class User implements Serializable {
     private String password;
     private String phone;
 
+    public User(){ //metodo construtor default
+
+    }
+
     public User(Long id, String name, String email, String password, String phone) {
         this.id = id;
         this.name = name;
