@@ -3,7 +3,9 @@ package com.gbassServices.project.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_category")
@@ -15,16 +17,20 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
+    //Association Many-to-many
+    private Set<Product> products = new HashSet<>();
+
+    //Constructor empty
     public Category(){
-        //construtor vazio
     }
 
+    //Constructor using fields
     public Category(Long id, String name){
-        //construtor com argumentos
         this.id = id;
         this.name = name;
     }
 
+    //Getters and setters
     public Long getId() {
         return id;
     }
@@ -41,6 +47,11 @@ public class Category implements Serializable {
         this.name = name;
     }
 
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    //Hash code and equals
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
