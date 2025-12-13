@@ -1,5 +1,6 @@
 package com.gbassServices.project.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -18,6 +19,8 @@ public class Category implements Serializable {
     private String name;
 
     //Association Many-to-many
+    @ManyToMany(mappedBy = "categories")
+    @JsonIgnore
     private Set<Product> products = new HashSet<>();
 
     //Constructor empty
