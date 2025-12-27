@@ -27,3 +27,5 @@
 > - [x] **_Order, Instant, ISO 8601_** [Entity -> "To many" association, lazy loading, JsonIgnore |RepositorySeed |Service |Resource]
 > - [x] **_OrderStatus enum_**
 > - [x] **_Entity Category, Product_**
+> - [x] **_Many-to-many association with JoinTable_**
+> - [ ]  **_OrderItem, many-to-many association with extra attributes_** [OrderItemPK | OrderItem |Order one-to-many-association | Seed]
