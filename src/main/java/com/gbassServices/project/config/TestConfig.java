@@ -1,13 +1,7 @@
 package com.gbassServices.project.config;
-import com.gbassServices.project.entities.Category;
-import com.gbassServices.project.entities.Order;
-import com.gbassServices.project.entities.Product;
-import com.gbassServices.project.entities.User;
+import com.gbassServices.project.entities.*;
 import com.gbassServices.project.enums.OrderStatus;
-import com.gbassServices.project.repositories.CategoryRepository;
-import com.gbassServices.project.repositories.OrderRepository;
-import com.gbassServices.project.repositories.ProductRepository;
-import com.gbassServices.project.repositories.UserRepository;
+import com.gbassServices.project.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +24,9 @@ public class TestConfig implements CommandLineRunner {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private OrderItemRepository orderItemRepository;
 
     @Override
     //tudo o que for colocado dentro deste método será
@@ -61,5 +58,13 @@ public class TestConfig implements CommandLineRunner {
         prod4.getCategories().add(cat1);
 
         productRepository.saveAll(Arrays.asList(prod1,prod2,prod3,prod4));
+
+        OrderItem oi1 = new OrderItem(o1,prod1,2, prod1.getPrice());
+        OrderItem oi2 = new OrderItem(o2,prod3,1, prod3.getPrice());
+        OrderItem oi3 = new OrderItem(o3,prod4,3, prod4.getPrice());
+        OrderItem oi4 = new OrderItem(o1,prod2,1, prod2.getPrice());
+
+        orderItemRepository.saveAll((Arrays.asList(oi1,oi2,oi3,oi4)));
     }
+
 }
