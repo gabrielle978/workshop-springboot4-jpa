@@ -28,4 +28,8 @@
 > - [x] **_OrderStatus enum_**
 > - [x] **_Entity Category, Product_**
 > - [x] **_Many-to-many association with JoinTable_**
-> - [ ]  **_OrderItem, many-to-many association with extra attributes_** [OrderItemPK | OrderItem |Order one-to-many-association | Seed]
+> - [x]  **_OrderItem, many-to-many association with extra attributes_** [OrderItemPK | OrderItem |Order one-to-many-association | Seed]
+> - [x]  **_Product-OrderItem one-to-many association_**
+> - [x]  **_Payment, one-to-one association_**
+> - [x]  **_Subtotal & Total methods_**
+> - [ ]  **_User insert / User delete / User update_** 
