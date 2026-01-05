@@ -32,4 +32,5 @@
 > - [x]  **_Product-OrderItem one-to-many association_**
 > - [x]  **_Payment, one-to-one association_**
 > - [x]  **_Subtotal & Total methods_**
-> - [ ]  **_User insert / User delete / User update_** 
+> - [x]  **_User insert / User delete / User update_**
+> - [ ]  **_Excecption handling: findById / delete / update (package resources and services)_** 
