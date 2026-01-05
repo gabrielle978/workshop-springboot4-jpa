@@ -2,8 +2,11 @@ package com.gbassServices.project.services;
 
 import com.gbassServices.project.entities.User;
 import com.gbassServices.project.repositories.UserRepository;
+import com.gbassServices.project.services.exceptions.DatabaseException;
 import com.gbassServices.project.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,8 +30,14 @@ public class UserService {
         return repository.save(obj);
     }
 
-    public void delete(Long id){
-        repository.deleteById(id);
+    public void delete(Long id) {
+        try {
+            repository.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            throw new ResourceNotFoundException(id);
+        } catch (DataIntegrityViolationException e) {
+            throw new DatabaseException(e.getMessage()); //exceção lançada da minha camada de serviço
+        }
     }
 
     public User update(Long id, User obj){
