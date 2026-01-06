@@ -6,7 +6,7 @@ RUN apt-get install openjdk-21-jdk -y
 COPY . .
 
 RUN apt-get install maven -y
-RUN mvn clean install
+RUN mvn clean install -U
 
 FROM maven:3.9.6-eclipse-temurin-21-jammy
 EXPOSE 8080
