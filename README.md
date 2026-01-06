@@ -1,5 +1,7 @@
 # ☕Projeto web services com Spring Boot e JPA / Hibernate 
 
+### 💻Deploy on Render: [https://workshop-springboot4-jpa-3axm.onrender.com]
+
 ## 🎯Objetivos 
 - Criar projeto Spring Boot Java
 - Implementar modelo de domínio
@@ -33,4 +35,4 @@
 > - [x]  **_Payment, one-to-one association_**
 > - [x]  **_Subtotal & Total methods_**
 > - [x]  **_User insert / User delete / User update_**
-> - [ ]  **_Excecption handling: findById / delete / update (package resources and services)_** 
+> - [x]  **_Excecption handling: findById / delete / update (package resources and services)_** 
